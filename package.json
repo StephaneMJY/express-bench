@@ -21,6 +21,7 @@
     "cassandra-driver": "^2.0.0",
     "express": "^4.12.2",
     "express-enrouten": "^1.2.0",
+    "moment": "^2.9.0",
     "request": "^2.53.0",
     "yargs": "^3.5.4"
   }

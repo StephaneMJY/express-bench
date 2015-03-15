@@ -1,7 +1,10 @@
 var http = require('http'),
-  async = require('async');
+  async = require('async'),
+  moment = require('moment');
 
 var argv = require('yargs').argv;
+
+var now, later;
 
 var request_count,
   completed_count = 0;
@@ -28,12 +31,15 @@ var main = function(callback){
     query_functions.push(query);
   };
   console.log('Processing ' + request_count + ' requests');
+  now = moment();
   async.parallel(query_functions, function(){
+    later = moment();
     callback();
   }); 
 }
 
 main(function(){
   console.log('Test Completed');
+  console.log('Took ' + moment(later.diff(now)).millisecond() + ' millisecond');
   process.exit(0)
 });

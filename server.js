@@ -8,10 +8,6 @@ app.use(enrouten({
     index: 'controllers/index.js'
 }));
 
-app.use(function(){
-  console.log('working');
-})
-
 server = app.listen(3000, function () {
 
     var host = server.address().address
