@@ -1,7 +1,4 @@
-var gulp = require('gulp'),
-  http = require('http'),
-  q = require('q'),
-  curl = require('curlrequest'),
+var http = require('http'),
   async = require('async');
 
 var argv = require('yargs').argv;
